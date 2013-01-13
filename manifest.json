@@ -1,0 +1,17 @@
+{
+  "name": "Vkontakte Playlist Downloader",
+  "icons": { "16": "icon_16.png",
+             "48": "icon_48.png",
+            "128": "icon_128.png" },
+  "version": "0.3",
+  "minimum_chrome_version": "16.0.884",
+  "manifest_version": 2,
+  "description": "Batch download of a selected subset of audio tracks from visible playlist on vkontakte.",
+  "browser_action": {
+    "default_icon": "icon_128.png",
+    "default_popup": "popup.html"
+  },
+  "permissions": [
+    "downloads", "tabs", "https://*/*"
+  ]
+}
