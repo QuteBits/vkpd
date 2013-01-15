@@ -12,4 +12,4 @@ Chrome Extension for batch download of audio tracks from social network VKontakt
 * Click on the extension (vkpd) icon on your URL bar and select tracks You want to download.
 * Click on DOWNLOAD. Files will be saved in the default Chrome downloads folder.
 
-Enjoy!
+Enjoy and contact <a href="https://twitter.com/qutebits">@qutebits</a>
