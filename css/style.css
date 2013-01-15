@@ -141,7 +141,7 @@ input[type=checkbox] {
 	margin-left: 8px;
 	margin-right: 7px;
 	
-    background: url("checkbox.png") no-repeat 0 0;
+    background: url("../img/checkbox.png") no-repeat 0 0;
 }
 
 input[type=checkbox]:not(:checked):hover {
