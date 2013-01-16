@@ -1,5 +1,6 @@
 var result = [];
 
+//check each audio box on the site
 $('#audios_list .area').each( function(index) {
     //extract and correct URL
 	var link = $(this).find('.play_btn input').val();
@@ -7,30 +8,28 @@ $('#audios_list .area').each( function(index) {
 	  
 	//extract and correct TITLE
 	var title_artist = $(this).find('.title_wrap a:eq(0)').text();
-	var title_song = $(this).find('.title_wrap .title').text();
-		
-	while(title_song.indexOf('\'') != -1){
-		var index_ill = title_song.indexOf('\'');
-		title_song = title_song.substring(0,index_ill) + title_song.substring(index_ill+1,title_song.length);
+	var title_song   = $(this).find('.title_wrap .title').text();
+	var title = title_artist.trim() + ' - ' + title_song.trim();
+	
+	//throw away restricted characters from the song name
+	while(title.indexOf('\'') != -1){
+		var index_ill = title.indexOf('\'');
+		title = title.substring(0,index_ill) + title.substring(index_ill+1,title.length);
 	}
 
-	while(title_artist.indexOf('\'') != -1){
-		var index_ill = title_artist.indexOf('\'');
-		title_artist = title_artist.substring(0,index_ill) + title_artist.substring(index_ill+1,title_artist.length);
-	}
-	 
+	//mark currently played track	 	
+	var currently_played = 0;
+	if($(this).parent().hasClass('current')) { currently_played = 1; }
+		
+	//push collected (URL,TITLE,FLAG) into a TRIPLE
 	var triple = [];
-	
-	//push DATA
 	triple.push(link.trim());            
-	triple.push(title_artist.trim() + ' - ' + title_song.trim());
-	//mark currently played track
-	if($(this).parent().hasClass('current')) {
-		triple.push(1);
-	}
-	triple.push(0);
+	triple.push(title);
+	triple.push(currently_played);
+
+	//push TRIPLE into RESULT
 	result.push(triple);  
 });
 
-//send RESULT
+//send the RESULT
 chrome.extension.sendRequest(result);

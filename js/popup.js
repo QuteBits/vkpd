@@ -77,10 +77,11 @@ window.onload = function() {
   
   chrome.windows.getCurrent(function (currentWindow) {
     chrome.tabs.query({active: true, windowId: currentWindow.id},
-                      function(activeTabs) {
-							chrome.tabs.executeScript(activeTabs[0].id, { file:"lib/jquery-1.8.2.min.js" }, function() {
-							chrome.tabs.executeScript(activeTabs[0].id, { file:"js/extract_links.js" });
-		});
+        function(activeTabs) {
+			chrome.tabs.executeScript(activeTabs[0].id, { file:"lib/jquery-1.8.2.min.js" }, function() {
+				chrome.tabs.executeScript(activeTabs[0].id, { file:"js/extract_links.js" });
+			}
+		);
     });
   });
 };
