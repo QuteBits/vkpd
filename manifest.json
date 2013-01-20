@@ -8,6 +8,7 @@
   "manifest_version": 2,
   "description": "Batch download of audio tracks on VKontakte.",
   "browser_action": {
+    "default_title": "vkpd v0.3",
     "default_icon": "img/icon_128.png",
     "default_popup": "popup.html"
   },
