@@ -13,6 +13,6 @@
     "default_popup": "popup.html"
   },
   "permissions": [
-    "downloads", "tabs", "https://*/*"
+    "downloads", "tabs", "https://*/*", "http://*/*"
   ]
 }
