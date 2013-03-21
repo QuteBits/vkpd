@@ -1,10 +1,11 @@
 vkpd (VKontakte Playlist Downloader)
 ====================================
-Chrome Extension for batch download of audio tracks from social network VKontakte
-Currently works on dev and canary builds of Chrome
+Chrome Extension for batch download of audio tracks from social network VKontakte.
+
+_IMPORTANT: Currently works only with dev and canary builds of Chrome._
 
 # Install:
-* Get a dev channel version of Chrome [here](https://sites.google.com/a/chromium.org/dev/getting-involved/dev-channel)
+* Get a version of Chrome [from Google's dev channel](https://sites.google.com/a/chromium.org/dev/getting-involved/dev-channel)
 * Download this whole project from GitHub, unzip to some folder "x",
 * Open Chrome, go to "chrome://extensions/" (it opens options->extensions tab), choose to install the extension from HDD, show the path to the folder "x", click on "Install".
 
